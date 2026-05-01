@@ -45,22 +45,22 @@ camera/top-view image
 
 ## Real robot demo material
 
-실제 좌표 이동 실험에서 사용한 영상 자료입니다. 미디어 파일은 저장소에 직접 포함하지 않고 GitHub README attachment로 연결합니다. 이렇게 하면 README에서는 실제 구동 자료를 확인할 수 있고, `git clone` 시에는 대용량 영상 파일이 내려오지 않습니다.
+실제 좌표 이동 실험에서 사용한 영상 자료입니다.
 
 <table>
   <tr>
     <td align="center" valign="top">
       <strong>Grid trace while moving</strong><br><br>
-      <img width="260" alt="real_raspbot_grid_trace" src="https://github.com/user-attachments/assets/afbcff0f-a681-4d03-bdc4-b5338b39d1d5" />
+      <img width="300" height="364" alt="real_raspbot_grid_trace" src="https://github.com/user-attachments/assets/792291b8-e072-4ac0-b727-376303f18c1c" />
       <br><br>
-      <sub>라즈봇이 이동할 때 추정 위치가 실시간으로 grid 화면에 표시되는 영상입니다.</sub>
+      이동시, 추정 위치가 실시간으로 화면에 표시
       <br>
     </td>
     <td align="center" valign="top">
       <strong>Target / marker layout</strong><br><br>
-      <img width="560" alt="real_raspbot_target_move_poster" src="https://github.com/user-attachments/assets/15317ae9-f764-4268-8250-96f3a6b86ff5" />
+        <img width="725" height="364" alt="real_raspbot_target_move_poster" src="https://github.com/user-attachments/assets/96e99b1d-f8be-4d1f-a9ec-42c0c17d6940" />
       <br><br>
-      <sub>실험에서 사용한 마커 좌표와 이동 목표를 확인하기 위한 이미지입니다.</sub>
+      영상에서 사용한 마커 좌표와 이동 목표 좌표 순서
     </td>
   </tr>
 </table>
@@ -69,7 +69,9 @@ camera/top-view image
 
 라즈봇이 목표 좌표를 향해 이동하는 실제 구동 영상입니다.
 
-https://github.com/user-attachments/assets/9ce3f9b8-919f-4511-9735-b9133d251214
+
+https://github.com/user-attachments/assets/66352bb0-e060-425c-8fd8-5ef561f5db8d
+
 
 위 자료는 실제 라즈봇에서 작동 여부를 보여주기 위한 것입니다. 아래 오프라인 데모는 같은 하드웨어가 없어도 마커 인식과 위치 추정 흐름을 확인할 수 있도록 분리한 버전입니다.
 
@@ -77,7 +79,11 @@ https://github.com/user-attachments/assets/9ce3f9b8-919f-4511-9735-b9133d251214
 
 | Input | Marker detection | Pose / target |
 |---|---|---|
-| ![](docs/images/offline_demo/00_input.jpg) | ![](docs/images/offline_demo/04_marker_detected.jpg) | ![](docs/images/offline_demo/06_pose_world.jpg) |
+| <img height="498" alt="00_input" src="https://github.com/user-attachments/assets/695368b3-ec61-47b7-a3c6-cb6d5e1c421f" /> | <img width="264" height="316" alt="04_marker_detected" src="https://github.com/user-attachments/assets/9e7fc957-0a5c-42af-8f29-0cca707930ef" /> | <img height="498" alt="06_pose_world" src="https://github.com/user-attachments/assets/0ab6af21-afd9-4e0b-8bc4-ce48b94c9a3b" /> |
+
+
+
+
 
 샘플 실행 결과:
 
