@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# Build/package artifacts
+build/
+dist/
+*.egg-info/
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.*
+
+# Generated offline demo outputs
+assets/outputs/*
+!assets/outputs/.gitkeep
+
+# Local demo media files
+assets/media/*.mp4
+assets/media/*.mov
+assets/media/*.webm
+assets/media/*.gif
+assets/media/*.jpg
+!assets/media/.gitkeep
+
+# Large local raw data
+assets/raw/
+assets/videos/

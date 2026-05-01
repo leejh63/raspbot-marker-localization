@@ -1,0 +1,17 @@
+[project]
+name = "marker-localization-offline-demo"
+version = "0.1.0"
+description = "Offline marker-based localization demo extracted from a Raspbot experiment."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26,<3",
+  "opencv-python-headless>=4.9,<5",
+  "scikit-learn==1.6.1",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
