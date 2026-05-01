@@ -1,8 +1,14 @@
 # Raspbot Marker Localization Offline Demo
 
-라즈봇(Raspbot) 좌표 이동 실험에서 사용한 마커 기반 위치 추정 흐름을 분리해, 하드웨어 없이도 재현 가능하도록 정리한 오프라인 데모입니다.
+실제 라즈봇 좌표 이동 실험에서 사용했던 마커 기반 위치 추정 흐름을,
+하드웨어 없이 재현 가능한 오프라인 데모로 분리한 저장소입니다.
 
-실제 로봇 실험은 목표 좌표를 입력받고, 카메라 프레임에서 바닥 마커를 검출한 뒤, 현재 pose를 반복적으로 추정하면서 목표 지점 근처까지 이동하는 방식으로 진행되었습니다. 이 저장소는 그중 하드웨어 없이 재현 가능한 **마커 인식, 위치 추정, 목표 좌표 기준 이동 명령 추천** 흐름만 분리한 버전입니다.
+이 프로젝트는 저장된 이미지에서 바닥 마커를 검출하고,
+마커 ID와 방향을 이용해 로봇의 pose를 추정한 뒤,
+목표 좌표까지의 delta를 계산하고 open-loop 모터 명령을 추천합니다.
+
+> This repository does not include the full real-time robot runtime.  
+> It focuses on the reproducible perception/localization pipeline extracted from the original Raspbot experiment.
 
 ```text
 image input
@@ -13,10 +19,9 @@ image input
 → target delta calculation
 → open-loop motor command recommendation
 ```
-
 ## Original real robot experiment
 
-원래 라즈봇 실험은 이미지 한 장만 분석하는 오프라인 데모가 아니라, 실제 로봇이 목표 좌표를 입력받고 현재 위치를 반복적으로 추정하면서 목표 지점까지 이동하는 방식으로 진행되었습니다.
+원래 라즈봇 프로젝트는 이미지 한 장만 분석하는 오프라인 데모가 아니라, 실제 로봇이 목표 좌표를 입력받고 현재 위치를 반복적으로 추정하면서 목표 지점까지 이동하는 방식으로 진행되었습니다.
 
 실험 당시의 동작 흐름은 아래와 같았습니다.
 
@@ -30,7 +35,7 @@ image input
 7. 목표 근처에 도달할 때까지 2~6 과정을 반복한다.
 ```
 
-다만 각 모터 명령은 엔코더 피드백을 사용하는 정밀 제어기가 아니라, 기존 실험 데이터로 학습한 open-loop command recommendation에 가까웠습니다. 즉, 한 번의 이동 명령으로 끝내는 구조가 아니라 이동 후 다시 마커를 인식해 pose를 갱신하는 방식으로 실험했습니다.
+다만 각 모터 명령은 엔코더 피드백을 사용하는 정밀 제어기가 아니라, 기존 실험 데이터로 학습한 open-loop command recommendation에 가까웠습니다. 즉, 한 번의 이동 명령으로 끝내는 구조가 아니라 이동 후 다시 마커를 인식해 pose를 갱신하는 방식으로 진행했습니다.
 
 이 저장소는 위 전체 루프 중에서 아래 계산 흐름을 오프라인으로 분리한 버전입니다.
 
