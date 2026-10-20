@@ -63,7 +63,7 @@ camera/top-view image
     </td>
     <td align="center" valign="top">
       <strong>Target / marker layout</strong><br><br>
-        <img width="725" height="364" alt="real_raspbot_target_move_poster" src="https://github.com/user-attachments/assets/96e99b1d-f8be-4d1f-a9ec-42c0c17d6940" />
+        <img width="725" height="364" alt="real_raspbot_target_move_poster" src="https://github.com/user-attachments/assets/3914a97d-26b2-432e-967f-23613b503707" />
       <br><br>
       영상에서 사용한 마커 좌표와 이동 목표 좌표 순서
     </td>
